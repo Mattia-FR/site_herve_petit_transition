@@ -18,3 +18,22 @@
 	--font-one: "Lusitana", serif;
 	--font-two: "Nunito", sans-serif;
 }
+
+body {
+	font-family: var(--font-two);
+	background-color: var(--color-one);
+	color: var(--color-two);
+}
+
+h1,
+h2 {
+	font-family: var(--font-one);
+}
+
+.transition {
+	background-color: var(--color-five);
+}
+
+footer {
+	background-color: var(--color-five);
+}
