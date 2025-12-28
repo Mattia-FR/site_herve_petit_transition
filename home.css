@@ -1,0 +1,20 @@
+/* On importe les fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* Pour poser une base propre */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* On définit les variables */
+:root {
+	--color-one: #f6f4ef;
+	--color-two: #2e2c28;
+	--color-three: #5a564f;
+	--color-four: #6e86a6;
+	--color-five: #b7c7da;
+	--font-one: "Lusitana", serif;
+	--font-two: "Nunito", sans-serif;
+}
