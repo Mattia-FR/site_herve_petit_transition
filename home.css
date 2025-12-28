@@ -3,37 +3,99 @@
 
 /* Pour poser une base propre */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* On définit les variables */
 :root {
-	--color-one: #f6f4ef;
-	--color-two: #2e2c28;
-	--color-three: #5a564f;
-	--color-four: #6e86a6;
-	--color-five: #b7c7da;
-	--font-one: "Lusitana", serif;
-	--font-two: "Nunito", sans-serif;
+  --color-one: #f6f4ef;
+  --color-two: #2e2c28;
+  --color-three: #5a564f;
+  --color-four: #6e86a6;
+  --color-five: #b7c7da;
+  --font-one: "Lusitana", serif;
+  --font-two: "Nunito", sans-serif;
 }
 
 body {
-	font-family: var(--font-two);
-	background-color: var(--color-one);
-	color: var(--color-two);
+  font-family: var(--font-two);
+  background-color: var(--color-one);
+  color: var(--color-two);
 }
 
-h1,
+h1 {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--color-one);
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  font-family: var(--font-one);
+}
+
 h2 {
-	font-family: var(--font-one);
+  font-family: var(--font-one);
+  font-size: clamp(1.3rem, 3vw, 3rem);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .transition {
-	background-color: var(--color-five);
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+  padding: 7vh 0;
+  p {
+    max-width: 80vw;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-three);
+    border: 1px solid var(--color-five);
+    border-radius: 15px;
+    padding: 1rem;
+  }
+}
+
+.works {
+  margin-bottom: 2rem;
+  h2 {
+    padding: 0 0 2rem 0.5rem;
+    color: var(--color-four);
+  }
+  .work-pieces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .work-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    flex: 0 0 auto;
+  }
+}
+
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 footer {
-	background-color: var(--color-five);
+  background-color: var(--color-five);
 }
