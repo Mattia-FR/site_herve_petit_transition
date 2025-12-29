@@ -23,33 +23,55 @@ body {
   font-family: var(--font-two);
   background-color: var(--color-one);
   color: var(--color-two);
-}
-
-h1 {
-  position: absolute;
-  top: 15%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: var(--color-one);
-  font-size: clamp(1.5rem, 5vw, 4rem);
-  font-family: var(--font-one);
+  line-height: 1.6;
 }
 
 h2 {
   font-family: var(--font-one);
-  font-size: clamp(1.3rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 3vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  color: var(--color-five);
 }
 
 .hero {
   position: relative;
   width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4vh;
+    color: var(--color-one);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-family: var(--font-one);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  }
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--color-five));
+  z-index: 2;
 }
 
 .transition {
@@ -57,23 +79,25 @@ h2 {
   justify-content: center;
   min-height: 200px;
   padding: 7vh 0;
+  background-color: var(--color-five);
+
   p {
     max-width: 80vw;
     font-size: 1rem;
-    line-height: 1.5;
-    color: var(--color-three);
-    border: 1px solid var(--color-five);
-    border-radius: 15px;
+    color: var(--color-two);
     padding: 1rem;
   }
 }
 
 .works {
-  margin-bottom: 2rem;
+  padding: 3rem 1rem;
+
   h2 {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 0 0 2rem 0.5rem;
-    color: var(--color-four);
   }
+
   .work-pieces {
     display: flex;
     flex-wrap: wrap;
@@ -82,20 +106,64 @@ h2 {
   }
 
   .work-item {
-    width: 300px;
+    width: clamp(250px, 75vw, 400px);
     height: 200px;
     overflow: hidden;
     flex: 0 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 15px;
+    }
   }
 }
 
-.work-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.artist {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  p {
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    color: var(--color-three);
+    margin-top: 1rem;
+  }
+}
+
+.contact-wrapper {
+  background-color: var(--color-five);
+
+  .contact {
+    padding: 3rem 1rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      color: var(--color-four);
+    }
+
+    p {
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      color: var(--color-two);
+      margin-top: 1rem;
+    }
+
+    a {
+      color: var(--color-four);
+      text-decoration: none;
+    }
+  }
 }
 
 footer {
-  background-color: var(--color-five);
+  padding: 2rem 1rem;
+  text-align: center;
+
+  p {
+    font-size: 0.9rem;
+    color: var(--color-two);
+  }
 }
