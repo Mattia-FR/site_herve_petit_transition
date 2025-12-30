@@ -32,7 +32,7 @@ h2 {
 	font-family: var(--font-one);
 	font-size: clamp(1.3rem, 3vw, 2.5rem);
 	margin-bottom: var(--space-two);
-	color: var(--color-five);
+	color: var(--color-four);
 }
 
 .hero {
@@ -162,15 +162,12 @@ h2 {
 .contact-wrapper {
 	background-color: var(--color-five);
 	padding: 4rem 0;
+	box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
 
 	.contact {
 		width: 80vw;
 		max-width: 800px;
 		margin: 0 auto;
-
-		h2 {
-			color: var(--color-four);
-		}
 
 		p {
 			font-size: clamp(0.95rem, 2vw, 1.05rem);
