@@ -154,7 +154,7 @@ h2 {
 		color: var(--color-three);
 	}
 
-	p:first-of-type {
+	p:not(:last-child) {
 		margin-bottom: var(--space-two);
 	}
 }
