@@ -121,7 +121,7 @@ h2 {
 	}
 
 	.work-item {
-		width: clamp(250px, 75vw, 400px);
+		width: clamp(200px, 75vw, 300px);
 		height: 200px;
 		overflow: hidden;
 		flex: 0 0 auto;
