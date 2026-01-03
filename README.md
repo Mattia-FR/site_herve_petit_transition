@@ -13,3 +13,4 @@
 - Rendre les œuvres navigables au clavier
 - Utiliser `:focus-visible`
 - Vérifier la hiérarchie et la lisibilité sans surcharger l’interface
+- Faire de vrais alt/aria labels
