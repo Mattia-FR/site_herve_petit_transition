@@ -18,23 +18,40 @@ body.appendChild(modal);
 const modalImage = modal.querySelector(".modal-image");
 const closeBtn = modal.querySelector(".modal-close");
 
-// Ouvrir la modale au clic sur une œuvre
-for (const item of workItems) {
-	item.addEventListener("click", () => {
-		const img = item.querySelector("img");
-		modalImage.src = img.src;
-		modalImage.alt = img.alt;
-		modal.classList.add("active");
-		body.style.overflow = "hidden"; // Empêche le scroll
-	});
+// Fonction pour ouvrir la modale
+function openModal(imgSrc, imgAlt) {
+	modalImage.src = imgSrc;
+	modalImage.alt = imgAlt;
+	modal.classList.add("active");
+	closeBtn.focus(); // Place le focus sur le bouton de fermeture pour l'accessibilité
+	body.style.overflow = "hidden"; // Empêche le scroll
 }
 
-// Fermer la modale
+// Fonction pour fermer la modale
 function closeModal() {
 	modal.classList.remove("active");
 	body.style.overflow = ""; // Restaure le scroll
 }
 
+// Ajouter les événements sur chaque œuvre
+for (const item of workItems) {
+	// Ouvrir la modale au clic sur une œuvre
+	item.addEventListener("click", () => {
+		const img = item.querySelector("img");
+		openModal(img.src, img.alt);
+	});
+
+	// Ajouter la navigation au clavier (Enter ou Espace)
+	item.addEventListener("keydown", (e) => {
+		if (e.key === "Enter" || e.key === " ") {
+			e.preventDefault(); // Empêche le scroll avec Space
+			const img = item.querySelector("img");
+			openModal(img.src, img.alt);
+		}
+	});
+}
+
+// Fermer la modale avec le bouton de fermeture
 closeBtn.addEventListener("click", closeModal);
 
 // Fermer en cliquant en dehors de l'image
