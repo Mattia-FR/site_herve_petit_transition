@@ -1,10 +1,13 @@
 # Hervé Petit - Site Temporaire
 
-Site web temporaire présentant le travail du peintre Hervé Petit, en attendant la refonte complète du site officiel.
+Site web temporaire réalisé pour le peintre Hervé Petit.
+Solution développée en HTML/CSS/JS vanilla pour assurer une présence en ligne pendant la refonte complète de son site officiel.
 
-## 📋 Description
+## 📋 Contexte
 
-Site vitrine minimaliste permettant de découvrir une sélection d'œuvres de l'artiste et de le contacter facilement. Le design épuré met en valeur les créations tout en restant fonctionnel et accessible.
+Solution que j'ai proposée pour remplacer l'ancien site (inactif et partiellement non fonctionnel depuis plus de 10 ans) tout en maintenant une présence en ligne pendant la création du site complet.
+
+Choix techniques : site onepage sans backend pour une mise en ligne rapide et un design épuré mettant en valeur les œuvres.
 
 ## ✨ Fonctionnalités
 
@@ -20,16 +23,6 @@ Site vitrine minimaliste permettant de découvrir une sélection d'œuvres de l'
 - CSS3 (variables CSS, flexbox, grid)
 - JavaScript vanilla (ES6+)
 - Google Fonts (Lusitana, Nunito)
-
-## 🎨 Palette de couleurs
-
-```css
---color-one: #f6f4ef;   /* Fond principal */
---color-two: #2e2c28;   /* Texte principal */
---color-three: #5a564f; /* Texte secondaire */
---color-four: #6e86a6;  /* Accent bleu */
---color-five: #b7c7da;  /* Fond alternatif */
-```
 
 ## 📁 Structure du projet
 
